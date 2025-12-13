@@ -1263,22 +1263,21 @@
                 </div>
 
                 <div class="faq-item">
-                    <h4>How does TOON handle arrays?</h4>
-                    <p>TOON supports <strong>three array formats</strong>:</p>
-                    <p><strong>1. Inline (primitives):</strong></p>
+                    <h4>What does TOON look like?</h4>
+                    <p><strong>Simple values:</strong></p>
+                    <pre><code>name: Alice
+age: 30
+active: true</code></pre>
+                    <p><strong>Lists:</strong></p>
                     <pre><code>tags[3]: reading,gaming,coding</code></pre>
-                    <p><strong>2. Tabular (objects with same keys):</strong></p>
-                    <pre><code>users[2]:
-  name | age | city
-  Alice | 25 | NYC
-  Bob | 30 | LA</code></pre>
-                    <p><strong>3. List (complex objects):</strong></p>
-                    <pre><code>users[2]:
-  - name: Alice
-    age: 25
-  - name: Bob
-    age: 30</code></pre>
-                    <p>The encoder automatically chooses the most compact format based on your data structure.</p>
+                    <p><strong>Objects:</strong></p>
+                    <pre><code>user:
+  name: Alice
+  email: alice@example.com</code></pre>
+                    <p><strong>Arrays of objects:</strong></p>
+                    <pre><code>users[2]{name,age,city}:
+  Alice,25,NYC
+  Bob,30,LA</code></pre>
                 </div>
 
                 <div class="faq-item">
