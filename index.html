@@ -129,6 +129,30 @@
             line-height: 1;
         }
 
+        /* App Icon with Glow */
+        .app-icon-wrapper {
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 22.5%;
+            display: block;
+            box-shadow:
+                0 0 25px rgba(238, 97, 35, 0.4),
+                0 0 45px rgba(255, 180, 50, 0.25),
+                0 0 60px rgba(238, 97, 35, 0.15);
+        }
+
+        @media (max-width: 767px) {
+            .app-icon {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
         .hero .tagline {
             font-size: clamp(18px, 3vw, 24px);
             margin-bottom: 30px;
@@ -931,6 +955,9 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
+                    <div class="app-icon-wrapper">
+                        <img src="Assets/j2nIcon.png" alt="Json2Toon App Icon" class="app-icon">
+                    </div>
                     <h1>Json2Toon</h1>
                     <p class="subtitle"><span style="font-weight: 800;">Convert JSON to TOON and back. Seamlessly.</span> A thoughtfully designed utility for Apple's ecosystem with syntax highlighting, token visualization, and quick clipboard access.</p>
                     <div class="platform-badges">
