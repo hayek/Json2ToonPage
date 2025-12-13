@@ -90,7 +90,7 @@
 
         @media (max-width: 767px) {
             .hero {
-                padding: 80px 0 60px;
+                padding: 60px 0 30px;
             }
         }
 
@@ -99,6 +99,12 @@
             grid-template-columns: 1fr;
             gap: 40px;
             align-items: end;
+        }
+
+        @media (max-width: 767px) {
+            .hero-content {
+                gap: 20px;
+            }
         }
 
         @media (min-width: 768px) {
@@ -144,6 +150,22 @@
         .app-store-button svg {
             width: 100%;
             height: auto;
+        }
+
+        /* Show desktop button by default, hide mobile button */
+        .app-store-mobile {
+            display: none;
+        }
+
+        @media (max-width: 767px) {
+            .app-store-desktop {
+                display: none;
+            }
+            .app-store-mobile {
+                display: inline-block;
+                margin: 10px auto 0;
+                max-width: 100%;
+            }
         }
 
         .cta-buttons {
@@ -192,7 +214,7 @@
 
         @media (max-width: 767px) {
             .section {
-                padding: 60px 0;
+                padding: 30px 0;
             }
         }
 
@@ -208,6 +230,12 @@
             font-size: clamp(36px, 5vw, 56px);
             text-align: center;
             margin-bottom: 60px;
+        }
+
+        @media (max-width: 767px) {
+            .section-title {
+                margin-bottom: 30px;
+            }
         }
 
         #faq .section-title {
@@ -401,7 +429,7 @@
 
         @media (max-width: 767px) {
             footer {
-                padding: 60px 0 40px;
+                padding: 30px 0 30px;
             }
         }
 
@@ -911,7 +939,7 @@
                         <span class="macos-badge">macOS</span>
                         <span class="macos-badge">visionOS</span>
                     </div>
-                    <a href="#" class="app-store-button">
+                    <a href="#" class="app-store-button app-store-desktop">
                         <svg viewBox="0 0 355 60" xmlns="http://www.w3.org/2000/svg">
                             <rect width="355" height="60" rx="20" fill="var(--primary-color)"/>
                             <text x="177.5" y="38" font-family="'Archivo', sans-serif" font-size="18" font-weight="600" fill="var(--bg-color)" text-anchor="middle">Get it for free on the App Store</text>
@@ -924,6 +952,12 @@
                         Your browser does not support the video tag.
                     </video>
                 </div>
+                <a href="#" class="app-store-button app-store-mobile">
+                    <svg viewBox="0 0 355 60" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="355" height="60" rx="20" fill="var(--primary-color)"/>
+                        <text x="177.5" y="38" font-family="'Archivo', sans-serif" font-size="18" font-weight="600" fill="var(--bg-color)" text-anchor="middle">Get it for free on the App Store</text>
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
